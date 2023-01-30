@@ -63,6 +63,7 @@ var calculateTimeCmd = &cobra.Command{
 }
 
 func init() {
+	log.Println("time.go的init")
 	timeCmd.AddCommand(nowTimeCmd)
 	timeCmd.AddCommand(calculateTimeCmd)
 	calculateTimeCmd.Flags().StringVarP(&calculateTime, "calculate", "c", "", `
